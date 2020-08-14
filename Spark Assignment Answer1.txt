@@ -1,0 +1,83 @@
+1a.
+4
+7
+5
+creating mammalsrdd RDD by using parallelize method and calculating length by using map method
+
+1b.
+spanish
+creating languaggesrdd RDD by using parallelize method and applying filter method to filter the string which doesn't contain the first letter 'f'
+
+1c.
+List(one two a b)
+combined two RDD's by using union method
+
+1d.
+1
+2
+3
+4
+Selecting unique values by using distinct method
+
+1e.
+Error sc.parallelize could not able to find mario and britney
+
+1f.
+2
+8
+10
+sorting the values by using sortBy method
+
+1g.
+(b,(2,second))
+(c,(3,third))
+Performing inner join 
+
+1h.
+(a,(1,None))
+(b,(2,second))
+(c,(3,third))
+performimg left outer join
+
+1i.
+3
+counting number of values by using count method
+
+1j.
+900
+finding max by using max method
+
+1k.
+List(4,99)
+select first two elements by using take(2)
+
+1l.
+List(1,2)
+takeordered method will sort the data first and then it will select 2 elements
+
+1m.
+List(348,99)
+top method will be used to select max elements in the RDD
+
+1n.
+553
+performing cumulative sum by using fold method
+
+1o.
+Explain how Spark uses lazy evaluation to execute the following lines of code.
+val numbersRdd = sc.parallelize(List(9, 2)) // step 1
+val squaresRdd = numbersRdd.map { x: Int => x * x } // step 2
+val evenSquares = squaresRdd.filter { x: Int => x % 2 == 0 } // step 3
+val squaresArray = squaresRdd.collect() // step 4
+
+When step4 will execute it will try to evaluate the step2
+Step2 required numbersRdd hence it will evaluate step1
+
+squaresRdd.filter will be assigned to evenSquares but this step will never evaluate as we are not triggering any job 
+by using collect/print
+
+
+
+
+
+
